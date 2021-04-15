@@ -1,3 +1,4 @@
+import 'package:exemplo1/breakpoints.dart';
 import 'package:exemplo1/pages/home/widgets/app_bar/mobile_app_bar.dart';
 import 'package:exemplo1/pages/home/widgets/app_bar/web_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -10,8 +11,8 @@ class HomePage extends StatelessWidget {
         print('constraints.biggest: ${constraints.biggest}');
         print('constraints.smallest: ${constraints.smallest}');
         return Scaffold(
-          drawer: Drawer(),
-          appBar: constraints.maxWidth < 800
+          drawer: constraints.maxWidth < mobileBreakPoint ? Drawer() : null,
+          appBar: constraints.maxWidth < mobileBreakPoint
               ? PreferredSize(
                   preferredSize: Size(double.infinity, 56),
                   child: MobileAppBar(),
