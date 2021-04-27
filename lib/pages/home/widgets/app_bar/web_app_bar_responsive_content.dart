@@ -23,9 +23,10 @@ class WebAppBarResponsiveContent extends StatelessWidget {
                     children: [
                       const SizedBox(width: 4),
                       IconButton(
-                          icon: Icon(Icons.search),
-                          color: Colors.grey[500],
-                          onPressed: () {}),
+                        icon: Icon(Icons.search),
+                        color: Colors.grey[500],
+                        onPressed: () {},
+                      ),
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
